@@ -91,7 +91,7 @@
                   <!-- Money Amount  -->
                   <div data-v-67caa467="" class="money">
                     <div data-v-67caa467="">
-                        ₹ <span data-v-67caa467="" class="p-l-5" id="money_amount_display">Loading...</span>
+                        RM <span data-v-67caa467="" class="p-l-5" id="money_amount_display">Loading...</span>
                     </div>
                 </div>
                 <!-- Money Amount -->
@@ -208,14 +208,14 @@
                                     <div data-v-67caa467="" class="van-image" style="width: 20px; height: 20px;">
                                         <img src="/images/htmls2.png" class="van-image__img">
                                     </div>
-                                    <span data-v-67caa467="" id="inr" class="m-l-10">INR ₹ / USDT</span>
+                                    <span data-v-67caa467="" id="inr" class="m-l-10">INR RM / USDT</span>
                                 </div>
                             </div>
                             <!-- Money Amount Field Label -->
 
                             <!-- Money Amount Field Input -->
                             <div data-v-67caa467="" class="box numberSize c-row c-row-between c-row-middle p-l-10">
-                                <div data-v-67caa467="" id="inr_input" class="fuhao">₹/$</div>
+                                <div data-v-67caa467="" id="inr_input" class="fuhao">RM/$</div>
                                 <div data-v-67caa467="" class="input van-cell van-field">
                                     <div class="van-cell__value van-cell__value--alone van-field__value">
                                         <div class="van-field__body">
@@ -547,7 +547,7 @@
             const minimumMoneyAllowed = parseInt(`<%=MinimumMoney%>`)
 
             if (!inputMoney || !(inputMoney >= minimumMoneyAllowed)) {
-                alertMessage(`Money is Required and it should be ₹${minimumMoneyAllowed} or above!`)
+                alertMessage(`Money is Required and it should be RM${minimumMoneyAllowed} or above!`)
                 return
             }
 
