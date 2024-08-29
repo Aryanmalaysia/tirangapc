@@ -233,7 +233,7 @@
             <div data-v-7b283485="" class="money"
               style="color: white; font-size: 0.6rem; font-weight: 400; margin-top: 8px;">
               <!---->
-              <div data-v-7b283485="">₹<span data-v-7b283485="" class="p-l-10">Loading...</span>
+              <div data-v-7b283485="">RM<span data-v-7b283485="" class="p-l-10">Loading...</span>
               </div>
             </div>
 
@@ -278,7 +278,7 @@
                   </div>
                 </div>
                 <h3 data-v-be467d1a="" class="money" style="margin-top: 8px;">
-                  ₹0.00
+                  RM0.00
                 </h3>
                 <span data-v-be467d1a="" style="margin-top: 8px;">
                   Main wallet
@@ -309,7 +309,7 @@
                   </div>
                 </div>
                 <h3 data-v-be467d1a="" style="margin-top: 8px;"  id="3rdParty">
-                  ₹0.00
+                  RM0.00
                 </h3>
                 <span data-v-be467d1a="" style="margin-top: 8px;">
                   3rd party wallet
@@ -473,9 +473,9 @@
         dataType: "json",
         success: function (response) {
           let user = response.data;
-          $('.mainmoney').text("₹" + new Intl.NumberFormat().format(user.money_user) + ".00");
+          $('.mainmoney').text("RM" + new Intl.NumberFormat().format(user.money_user) + ".00");
           $('.wallet-user .name').text(user.name_user);
-          $('.money').text("₹" + new Intl.NumberFormat().format(user.money_user) + ".00"); // :TODO
+          $('.money').text("RM" + new Intl.NumberFormat().format(user.money_user) + ".00"); // :TODO
         }
       });
     });
@@ -486,10 +486,10 @@
       success: function (response) {
         let user = response.data;
         $('.wallet-user .name').text(user.name_user);
-        $('.money').text("₹" + new Intl.NumberFormat().format(user.money_user) + ".00");
-        $('.mainmoney').text("₹" + new Intl.NumberFormat().format(user.money_user) + ".00");
-        $('.balance .item:eq(0) div:eq(1)').text("₹" + new Intl.NumberFormat().format(response.totalRecharge) + ".00");// :TODO
-        $('.balance .item:eq(1) div:eq(1)').text("₹" + new Intl.NumberFormat().format(response.totalWithdraw) + ".00");// :TODO
+        $('.money').text("RM" + new Intl.NumberFormat().format(user.money_user) + ".00");
+        $('.mainmoney').text("RM" + new Intl.NumberFormat().format(user.money_user) + ".00");
+        $('.balance .item:eq(0) div:eq(1)').text("RM" + new Intl.NumberFormat().format(response.totalRecharge) + ".00");// :TODO
+        $('.balance .item:eq(1) div:eq(1)').text("RM" + new Intl.NumberFormat().format(response.totalWithdraw) + ".00");// :TODO
       }
     });
     $.ajax({
@@ -501,7 +501,7 @@
         if (user.Data && user.Data.length) {
           let data = user.Data[0]
           $('#jilli').text(data.Balance);
-          $('#3rdParty').text("₹" + new Intl.NumberFormat().format(data.Balance));
+          $('#3rdParty').text("RM" + new Intl.NumberFormat().format(data.Balance));
         }
       }
     });
@@ -535,16 +535,16 @@
           if (user.Data) {
             let data = user.Data
             $('#jilli').text(data.CoinAfter);
-            $('#3rdParty').text("₹" + new Intl.NumberFormat().format(data.CoinAfter));
+            $('#3rdParty').text("RM" + new Intl.NumberFormat().format(data.CoinAfter));
             $.ajax({
               type: "GET",
               url: "/api/webapi/GetUserInfo",
               dataType: "json",
               success: function (response) {
                 let user = response.data;
-                $('.mainmoney').text("₹" + new Intl.NumberFormat().format(user.money_user) + ".00");
+                $('.mainmoney').text("RM" + new Intl.NumberFormat().format(user.money_user) + ".00");
                 $('.wallet-user .name').text(user.name_user);
-                $('.money').text("₹" + new Intl.NumberFormat().format(user.money_user) + ".00"); // :TODO
+                $('.money').text("RM" + new Intl.NumberFormat().format(user.money_user) + ".00"); // :TODO
               }
             });
           }
